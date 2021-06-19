@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFTL | Main</title>
+  <link rel="stylesheet" href="css/style.min.css?v=1.0">
+</head>
+
+<body>
+
+  <header id="header-section" class="header">
+
+  <div class="container">
+
+    <div class="header__inner">
+      <div class="header__icon">
+        <span>👅</span>
+
+        <div class="header__languages">
+          <button class="header__lang active">
+            EN
+          </button>
+
+          <button class="header__lang">
+            UA
+          </button>
+
+          <button class="header__lang">
+            RU
+          </button>
+        </div>
+      </div>
+
+
+
+      <a class="logo" href="#body" data-content="Logo">
+        logo
+      </a>
+
+      <button class="header__popup-btn">
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+
+</header>
+
+  <main class="main">
+
+    <section class="content">
+      <div class="content__ticker-up">
+        <span>FULL-CYCLE EVENT AGENCY FULL-CYCLE FULL-CYCLE FULL-CYCLE</span>
+      </div>
+
+      <div class="content__ticker-down">
+        <span>FULL-CYCLE EVENT AGENCY FULL-CYCLE EVENT AGENCY</span>
+      </div>
+
+      <div class="container">
+        <div class="content__wrapper">
+          <div class="buttons rotate"></div>
+          <div id="mag" class="content__inner">
+            <div class="content__left">where?</div>
+            <div class="content__title title magnetic">
+              <span class="title__inner">
+                <span>FULL-CYCLE</span>
+                <span class="title__subinner"><span>EVENT</span><span> AGENCY</span></span>
+              </span>
+            </div>
+            <div class="content__right">what?</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <img class="hide-icon" src="../images/content/emoji.png" alt="images emoji">
+  <div class="container">
+    <div class="footer__wrapper">
+      <p class="footer__copy">
+        who?
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <script type="text/javascript">
+    const btns = document.querySelectorAll(".magnetic");
+
+    btns.forEach((btn) => {
+      btn.addEventListener("mousemove", function (e) {
+        const position = btn.getBoundingClientRect();
+        const x = e.pageX - position.left - position.width / 2;
+        const y = e.pageY - position.top - position.height / 2;
+
+        btn.children[0].style.transform = "translate(" + x * 0.3 + "px, " + y * 0.5 + "px)";
+      });
+    });
+
+    btns.forEach((btn) => {
+      btn.addEventListener("mouseout", function (e) {
+        btn.children[0].style.transform = "translate(0px, 0px)";
+      });
+    });
+  </script>
+
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+$default: #373737; //шрифт
+$title: #373737; // заголовки
+
+%gtera-400 {
+  font-family: 'Grtsk-Tera-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%gtera-600 {
+  font-family: 'Grtsk-Tera-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%gteraital-700 {
+  font-family: 'Grtsk-Tera-Bold-Italic', sans-serif;
+  font-weight: 700;
+}
+%gtera-700 {
+  font-family: 'Grtsk-Tera-Bold', sans-serif;
+  font-weight: 700;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
